@@ -49,33 +49,59 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.search input{
+/* NAYA — Modern Search Bar */
+.search input {
     border: none;
     outline: none;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.08);
     color: white;
-    padding: 10px 25px;
+    padding: 10px 25px 10px 50px; /* left padding for icon space */
     height: 60px;
-    border-radius: 20px;
+    border-radius: 50px; /* pill shape */
     flex: 1;
-    margin-right: 16px;
-    font-size: 18px;
+    margin-right: 12px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
 }
-.search input::placeholder{
-    color: rgba(255,255,255,0.7);
+
+.search input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56,189,248,0.2),
+                inset 0 2px 8px rgba(0,0,0,0.1);
 }
-.search button{
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+}
+.search button {
     border: none;
     outline: none;
-    background: #38bdf8;
-    border-radius: 18px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border-radius: 50px;
     width: 60px;
     height: 60px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+    flex-shrink: 0;
 }
-.search button:hover{
+
+.search button:hover {
     transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+.search button:active {
+    transform: scale(0.96);
 }
 .search button img{
     width: 16px;
@@ -146,4 +172,4 @@ body{
         opacity: 1;
         transform: translateY(0);
     }
-}
+} 
