@@ -49,7 +49,6 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-/* NAYA — Modern Search Bar */
 .search input {
     border: none;
     outline: none;
